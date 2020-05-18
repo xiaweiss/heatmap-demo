@@ -24,4 +24,4 @@ class Device {
   }
 }
 
-export default device
+export default Device
