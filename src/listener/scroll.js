@@ -9,6 +9,7 @@ function scroll () {
     if (timer) clearTimeout(timer)
     timer = setTimeout(() => {
       const scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+
       // TODO 处理 SPA 多页面的情况
       if (scrollTop > maxScrollTop) {
         maxScrollTop = scrollTop

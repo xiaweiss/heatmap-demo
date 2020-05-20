@@ -64,7 +64,7 @@ function updateBlockList({blockList, blockHeight, scrollTop, screenHeight}) {
       if(!item.inScreen) {
         item.inScreen = true
         item.enterTime = Date.now()
-      // 原先在屏幕内的
+        // 原先在屏幕内的
       } else {
         // 处理来回滚动的情况，取单次停留的最大值
         const newTime = Date.now() - item.enterTime

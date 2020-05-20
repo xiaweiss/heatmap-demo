@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/xiaweiss/hotmap#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "wolfy87-eventemitter": "^5.2.9"
   },
   "devDependencies": {
