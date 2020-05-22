@@ -4,23 +4,23 @@ import emitter from '../emitter.js'
 
 function scroll () {
   let timer = null
-  let maxScrollTop = 0
+  let maxScrollBottom = 0
   document.addEventListener('scroll', e => {
     if (timer) clearTimeout(timer)
     timer = setTimeout(() => {
       const scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+      const viewHeight = document.body.clientHeight
+      const scrollBottom = scrollTop + viewHeight
 
-      // TODO 处理 SPA 多页面的情况
-      if (scrollTop > maxScrollTop) {
-        maxScrollTop = scrollTop
+      // maxScrollBottom = scrollBottom > maxScrollBottom ? scrollBottom : maxScrollBottom
+      if (scrollBottom > maxScrollBottom) {
+        maxScrollBottom = scrollBottom
       }
-      emitter.emit(SCROLL_EVENT, maxScrollTop)
+      const data = maxScrollBottom
+      emitter.emit(SCROLL_EVENT, data)
       timer = null
     }, 200)
-  }, {
-    passive: true,
-    capture: true
-  })
+  }, { passive: true })
 }
 
 export default scroll

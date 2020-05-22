@@ -1,7 +1,5 @@
-/* 页面注意力, 记分区的停留时长 */
-import { ATTENTION_EVENT } from '../const.js'
-import emitter from '../emitter.js'
-
+/* 页面注意力 */
+// https://juejin.im/post/5ced34d5f265da1b94212a6f
 var scrollTop = 0
 var time = Date.now()
 var moveData = []
@@ -64,7 +62,7 @@ function move () {
 function attention () {
   document.addEventListener('scroll', e => {
     move()
-    // emitter.emit(ATTENTION_EVENT, {x: e.pageX, y: e.pageY})
+    // emitter.emit(ATTENTION_EVENT, moveData)
   }, {
     passive: true,
     capture: true

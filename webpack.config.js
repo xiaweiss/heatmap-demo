@@ -12,7 +12,7 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
     ]
   },
-  devtool: 'cheap-module-source-map',
+  devtool: 'cheap-module-source-example-map',
   devServer: {
     contentBase: './dist/', //表示静态资源（非webpack编译产生）文件的目录位置，
     //这个目录的资源会被放到同样当成服务器根目录去

@@ -1441,7 +1441,7 @@
           }
           function I(e) {
               return hj.hq.each(e, function(t, n) {
-                  n && "object" === i(n) ? I(n) : n && "string" == typeof n && -1 == y.indexOf(t) && (n = (n = (n = (n = n.replace(l, "<XXX>")).replace(d, "<user@example.com>")).replace(p, "123456789012")).replace(h, "<******>"),
+                  n && "object" === i(n) ? I(n) : n && "string" == typeof n && -1 == y.indexOf(t) && (n = (n = (n = (n = n.replace(l, "<XXX>")).replace(d, "<user@source-example.com>")).replace(p, "123456789012")).replace(h, "<******>"),
                   e[t] = n)
               }),
               e

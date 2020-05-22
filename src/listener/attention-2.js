@@ -71,7 +71,7 @@ function attention () {
         }
       } else {
         // 离开屏幕的
-        // 时长超过一定时间，上报
+        // 时长超过一定时间，加入上报列表
         if (item.inScreen && item.exposeTime >= attentionTime) {
           const data = {...item}
           emitter.emit(ATTENTION_EVENT, data)
